@@ -8,10 +8,15 @@ To install paswdgn, type in your console
 ```
 npm i pswdgn
 ```
-## Use
+## Functions
 
 To use password generation, use the following method
-```
+```js
 pswdgn.generate(length, specialChars)
 ```
 specialChars must be "true" or "false"
+
+To check if a password is strong, use the following method
+```js
+pswdgn.check(password)
+```

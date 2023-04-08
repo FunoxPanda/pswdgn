@@ -14,3 +14,25 @@ exports.generate = (lenght, special) => {
 
     return retVal;
 }
+
+exports.strenght = (password) => {
+    let strength = 0;
+    if (password.length >= 8 && password.length <= 12) {
+        strength += 10;
+    } else if (password.length > 12) {
+        strength += 25;
+    }
+    let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+    if (regex.test(password)) {
+        strength += 25;
+    }
+
+    if (!/(\w)\1{2,}/.test(password)) {
+        strength += 25;
+    }
+    if (!/(012|123|234|345|456|567|678|789)/.test(password)) {
+        strength += 25;
+    }
+
+    return (strength/75*100).toFixed(2);
+}
