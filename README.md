@@ -4,7 +4,7 @@
 
 # Install
 
-To install paswdgn, type in your console
+To install pswdgn, type in your console
 ```
 npm i pswdgn
 ```
