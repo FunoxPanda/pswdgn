@@ -1,4 +1,4 @@
-const generatePassword = (lenght, special) => {
+exports.generate = (lenght, special) => {
 
     var retVal = "";
     var length = parseInt(lenght, 10);
@@ -14,5 +14,3 @@ const generatePassword = (lenght, special) => {
 
     return retVal;
 }
-
-export default generatePassword;
